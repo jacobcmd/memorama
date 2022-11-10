@@ -2,7 +2,6 @@ let coches = [];
 let reverso = "img/reverso.png";
 
 function cargarImagenes() {
-
 	coches[0] = "img/coches/alfaromeogiulia.jpg";
 	coches[1] = "img/coches/alfaromeogiulieta.jpg";
 	coches[2] = "img/coches/audia4.jpg";

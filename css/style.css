@@ -140,3 +140,7 @@ input[type='image'] {
   font-family: 'good-times';
   font-size: small;
 }
+
+input[visible="true"]{
+  border: 2px solid green;
+}

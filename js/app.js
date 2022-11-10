@@ -20,6 +20,7 @@ function generarCartas(columnasFilas, numImg, tematica) {
 		img.setAttribute("type", "image");
 		img.setAttribute("class", "imagenCarta");
 		img.setAttribute("visible", false);
+		
 		img.setAttribute("src", listaImagenes[i]);
 		carta(parentElement, img, numImg);
 	}
@@ -110,18 +111,18 @@ function comprobarParejas() {
 		let imagenes = document.getElementsByClassName("imagenCarta");
 		for (let i = 0; i < imagenes.length; i++) {
 			if (!parejasAcertadas.includes(imagenes[i].getAttribute("src")) & imagenes[i].getAttribute("visible") == "true") {
-				parejas.push(imagenes[i]);
+				parejas.push(imagenes[i])				
 			}
 		}
 
-		if (parejas[0].getAttribute("src") != parejas[1].getAttribute("src")) {
-			
+		if (parejas[0].getAttribute("src") != parejas[1].getAttribute("src")) {			
 				puntos++;
 			setTimeout(
 				function () {
 					girarParejas(parejas[0], parejas[1]);
 					setTimeout(function () {
-						bloquearPanel(false);					
+						bloquearPanel(false);
+											
 					}, 1000);
 				},
 				1000
@@ -130,8 +131,7 @@ function comprobarParejas() {
 		else {
 			parejasAcertadas.push(parejas[0].getAttribute("src"));
 			puntos ++;
-			bloquearPanel(false);
-			
+			bloquearPanel(false);			
 		}
 		scorePartida();
 	}
